@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="/chapter4/stylesheet-shopping.css" />
+    <script src="/chapter4/main-shopping.js"></script>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="shopping__container">
+      <header class="shopping__header">
+        <h4 class="header__title">Shopping List</h4>
+      </header>
+      <main class="shopping__contentBox">
+        <ul class="contentBox__items">
+          <li class="contentBox__item">
+            <span class="item__text">Milk</span>
+            <button class="item__btn">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </button>
+          </li>
+          <li class="contentBox__item">
+            <span class="item__text">Eggs</span>
+            <button class="item__btn">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </button>
+          </li>
+        </ul>
+      </main>
+      <footer class="shopping__footer">
+        <form action="#">
+          <input
+            class="footer__textBox"
+            type="text"
+            placeholder="Add an item..."
+          />
+          <button type="submit" class="footer__btn">
+            <i class="fa-solid fa-rocket"></i>
+          </button>
+        </form>
+      </footer>
+    </section>
+  </body>
+</html>
