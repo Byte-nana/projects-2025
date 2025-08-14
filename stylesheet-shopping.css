@@ -11,12 +11,18 @@
 * {
   box-sizing: border-box;
 }
+ul {
+  padding: 0;
+}
 button {
-  cursor: pointer;
   border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 body {
   margin: 0;
+  text-align: center;
   font-family: 'Share Tech Mono';
   color: var(--text-primary);
   background: radial-gradient(
@@ -47,7 +53,7 @@ body {
     radial-gradient(1px 1px at 50% 20%, #fff 60%, transparent 61%);
   background-blend-mode: screen, normal;
 }
-.shopping__container {
+.container {
   width: 560px;
   height: 700px;
   border-radius: 20px;
@@ -59,9 +65,12 @@ body {
     inset 0 1px 0 color-mix(in oklab, #ffffff 12%, transparent);
   margin: clamp(24px, 6vh, 72px) auto;
 }
-.shopping__header {
+.header {
   width: 100%;
   height: 10%;
+  font-size: 38px;
+  font-family: 'Orbitron';
+  padding: 10px 0;
   background: linear-gradient(
     0deg,
     color-mix(in oklab, var(--secondary--colour) 55%, transparent),
@@ -70,25 +79,17 @@ body {
   border-bottom: 1px solid var(--line);
   border-radius: 20px 20px 0 0;
 }
-.header__title {
-  margin: 0;
-  padding: 5px;
-  text-align: center;
-  font-size: 38px;
-  font-family: 'Orbitron';
-}
-.shopping__contentBox {
+
+.items {
   width: 100%;
   height: 80%;
+  margin: 0;
   padding: 12px;
   /* 써지는 내용에 따라서 밑으로 스크롤 같이 내려가게 하기 */
-  overflow: scroll;
+  overflow-y: scroll;
 }
-.contentBox__items {
-  margin: 0;
-  padding: 0;
-}
-.contentBox__item {
+
+.item__row {
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -107,7 +108,7 @@ body {
 .item__btn:hover {
   transform: scale(1.5);
 }
-.shopping__footer {
+.footer {
   width: 100%;
   height: 10%;
   background: linear-gradient(
@@ -125,7 +126,7 @@ body {
   display: flex;
   justify-content: space-between;
 } */
-.footer__textBox {
+.footer__input {
   width: 472px;
   height: 44px;
   color: var(--text-primary);
@@ -139,10 +140,10 @@ body {
   outline: none;
   padding: 0 14px;
 }
-.footer__textBox::placeholder {
+.footer__input::placeholder {
   color: var(--text-secondary);
 }
-.footer__textBox:focus-visible {
+.footer__input:focus-visible {
   border-color: color-mix(in oklab, var(--secondary-variant) 55%, #fff 0%);
   box-shadow: 0 0 0 3px
     color-mix(in oklab, var(--secondary-variant) 30%, transparent);
