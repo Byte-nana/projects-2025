@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping List</title>
     <link rel="stylesheet" href="/chapter4/stylesheet-shopping.css" />
-    <script src="/chapter4/main-shopping.js"></script>
+    <script src="/chapter4/main-shopping.js" defer></script>
     <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/a5f079a000.js"
@@ -26,7 +26,7 @@
       </header>
       <main class="shopping__contentBox">
         <ul class="contentBox__items">
-          <li class="contentBox__item">
+          <!-- <li class="contentBox__item">
             <span class="item__text">Milk</span>
             <button class="item__btn">
               <i class="fa-solid fa-user-astronaut"></i>
@@ -37,20 +37,18 @@
             <button class="item__btn">
               <i class="fa-solid fa-user-astronaut"></i>
             </button>
-          </li>
+          </li> -->
         </ul>
       </main>
       <footer class="shopping__footer">
-        <form action="#">
-          <input
-            class="footer__textBox"
-            type="text"
-            placeholder="Add an item..."
-          />
-          <button type="submit" class="footer__btn">
-            <i class="fa-solid fa-rocket"></i>
-          </button>
-        </form>
+        <input
+          class="footer__textBox"
+          type="text"
+          placeholder="Add an item..."
+        />
+        <button type="button" class="footer__btn">
+          <i class="fa-solid fa-rocket"></i>
+        </button>
       </footer>
     </section>
   </body>

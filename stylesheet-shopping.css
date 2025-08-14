@@ -81,6 +81,8 @@ body {
   width: 100%;
   height: 80%;
   padding: 12px;
+  /* 써지는 내용에 따라서 밑으로 스크롤 같이 내려가게 하기 */
+  overflow: scroll;
 }
 .contentBox__items {
   margin: 0;
@@ -102,6 +104,9 @@ body {
   color: var(--text-primary);
   font-size: 18px;
 }
+.item__btn:hover {
+  transform: scale(1.5);
+}
 .shopping__footer {
   width: 100%;
   height: 10%;
@@ -113,11 +118,13 @@ body {
   border-top: 1px solid var(--line);
   border-radius: 0 0 20px 20px;
   padding: 14px 16px;
-}
-.shopping__footer form {
   display: flex;
   justify-content: space-between;
 }
+/* .shopping__footer form {
+  display: flex;
+  justify-content: space-between;
+} */
 .footer__textBox {
   width: 472px;
   height: 44px;
@@ -135,6 +142,11 @@ body {
 .footer__textBox::placeholder {
   color: var(--text-secondary);
 }
+.footer__textBox:focus-visible {
+  border-color: color-mix(in oklab, var(--secondary-variant) 55%, #fff 0%);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--secondary-variant) 30%, transparent);
+}
 .footer__btn {
   height: 44px;
   width: 44px;
@@ -145,4 +157,19 @@ body {
       color-mix(in oklab, var(--accent-colour) 35%, transparent),
     inset 0 -2px 0 color-mix(in oklab, #000 15%, transparent);
   color: var(--primary-colour);
+  transition: transform 0.08s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.footer__btn:hover {
+  box-shadow: 0 12px 36px
+      color-mix(in oklab, var(--accent-colour) 65%, transparent),
+    0 0 10px color-mix(in oklab, var(--accent-colour) 55%, transparent),
+    inset 0 -3px 4px color-mix(in oklab, #000 25%, transparent);
+  filter: saturate(1.2) brightness(1.05);
+  transform: translateY(-2px);
+}
+.footer__btn:hover i {
+  transform: scale(1.3);
+}
+.footer__btn:active {
+  transform: translateY(2px);
 }
