@@ -86,9 +86,9 @@ body {
   margin: 0;
   padding: 12px;
   /* 써지는 내용에 따라서 밑으로 스크롤 같이 내려가게 하기 */
-  overflow-y: scroll;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
-
 .item__row {
   display: flex;
   justify-content: space-between;
@@ -122,10 +122,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-/* .shopping__footer form {
-  display: flex;
-  justify-content: space-between;
-} */
 .footer__input {
   width: 472px;
   height: 44px;

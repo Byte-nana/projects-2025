@@ -1,4 +1,5 @@
 const items = document.querySelector('.items');
+const newForm = document.querySelector('.new__form');
 const input = document.querySelector('.footer__input');
 const addBtn = document.querySelector('.footer__btn');
 
@@ -20,33 +21,32 @@ function onAdd() {
   input.focus();
 }
 
+let id = 0;
 function createItem(text) {
   const itemRow = document.createElement('li');
   itemRow.className = 'item__row';
+  itemRow.setAttribute('data-id', id);
 
-  const name = document.createElement('span');
-  name.className = 'item__name';
-  name.innerText = text;
+  itemRow.innerHTML = `
+    <span class = "item__name">${text}</span>
+    <button class = "item__btn">
+      <i class="fa-solid fa-user-astronaut" data-id = ${id}></i>
+    </button>
+  `;
 
-  const deleteBtn = document.createElement('button');
-  deleteBtn.className = 'item__btn';
-  deleteBtn.innerHTML = '<i class="fa-solid fa-user-astronaut"></i>';
-  deleteBtn.addEventListener('click', () => {
-    items.removeChild(itemRow);
-  });
-
-  itemRow.appendChild(name);
-  itemRow.appendChild(deleteBtn);
-
+  id++;
   return itemRow;
 }
 
-input.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' && !e.isComposing) {
-    onAdd();
-  }
+newForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  onAdd();
 });
 
-addBtn.addEventListener('click', () => {
-  onAdd();
+items.addEventListener('click', (e) => {
+  const id = e.target.dataset.id;
+  if (id) {
+    const toBeDeleted = document.querySelector(`.item__row[data-id="${id}"]`);
+    toBeDeleted.remove();
+  }
 });
