@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space To-Do</title>
+    <script src="/main.js" defer></script>
+    <link rel="stylesheet" href="/style.css" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="todo__container">
+      <!-- header -->
+      <header class="todo__header">
+        <h1 class="header__title">Space To-Do</h1>
+        <button
+          class="header__toggleBtn"
+          type="button"
+          aria-label="Toggle light/dark mode"
+          aria-pressed="false"
+        >
+          <!-- light mode -->
+          <i class="fa-solid fa-sun"></i>
+          <!-- dark mode -->
+          <!-- <i class="fa-solid fa-moon"></i> -->
+        </button>
+      </header>
+      <!-- main -->
+      <main class="todo__main">
+        <form action="#" id="main__form">
+          <label for="todo__textInput">New Task</label>
+          <input
+            id="todo__textInput"
+            class="form__input"
+            type="text"
+            placeholder="Add a task"
+          />
+          <button
+            class="form__addBtn"
+            type="submit"
+            aria-label="Add to do list"
+          >
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </form>
+
+        <p id="form-message" class="form__message" aria-live="polite"></p>
+
+        <ul class="main__lists">
+          <li class="lists__item">
+            <label>
+              <input class="item__checkbox" type="checkbox" />
+              <span class="item__content">Build a space-themed app</span>
+            </label>
+            <button
+              class="item__deleteBtn"
+              aria-label="Delete to do list button"
+            >
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </li>
+        </ul>
+      </main>
+    </section>
+  </body>
+</html>
