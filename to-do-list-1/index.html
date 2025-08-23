@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -23,18 +23,18 @@
     <section class="todo__container">
       <!-- header -->
       <header class="todo__header">
-        <h1 class="header__title">To-Do</h1>
+        <h1 class="header__title">Space To-Do</h1>
         <button type="button" class="header__toggleBtn" aria-pressed="false">
           <span class="visually-hidden">Toggle light/dark mode</span>
           <!-- light mode -->
           <i class="fa-solid fa-sun" aria-hidden="true"></i>
           <!-- dark mode -->
-          <i class="fa-solid fa-moon" aria-hidden="true" hidden></i>
+          <!-- <i class="fa-solid fa-moon" aria-hidden="true" hidden></i> -->
         </button>
       </header>
       <!-- main -->
       <main class="todo__main">
-        <form action="#" id="main__form">
+        <form action="#" id="main__form" class="glass-bg">
           <label for="todo__textInput" class="visually-hidden">New Task</label>
           <p id="todo-hint" class="visually-hidden">
             Add a new task to your to-do list. Example: “Buy milk”
@@ -59,13 +59,11 @@
         <h2 class="visually-hidden" id="tasks-heading">Tasks</h2>
         <!-- to-do list -->
         <ul class="main__lists">
-          <li class="lists__item">
+          <li class="lists__item glass-bg">
             <!-- 1. checkbox + text -->
             <input type="checkbox" id="task-1-check" class="item__checkbox" />
             <label for="task-1-check">
-              <span id="task-1-text" class="item__content"
-                >Build a space-themed app</span
-              >
+              <span id="task-1-text" class="item__content">app</span>
             </label>
             <button
               type="button"
