@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Space To-Do</title>
+    <title>To-Do List</title>
     <script src="/main.js" defer></script>
     <link rel="stylesheet" href="/style.css" />
     <!-- fontawesome -->
@@ -23,51 +23,57 @@
     <section class="todo__container">
       <!-- header -->
       <header class="todo__header">
-        <h1 class="header__title">Space To-Do</h1>
-        <button
-          class="header__toggleBtn"
-          type="button"
-          aria-label="Toggle light/dark mode"
-          aria-pressed="false"
-        >
+        <h1 class="header__title">To-Do</h1>
+        <button type="button" class="header__toggleBtn" aria-pressed="false">
+          <span class="visually-hidden">Toggle light/dark mode</span>
           <!-- light mode -->
-          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
           <!-- dark mode -->
-          <!-- <i class="fa-solid fa-moon"></i> -->
+          <i class="fa-solid fa-moon" aria-hidden="true" hidden></i>
         </button>
       </header>
       <!-- main -->
       <main class="todo__main">
         <form action="#" id="main__form">
-          <label for="todo__textInput">New Task</label>
+          <label for="todo__textInput" class="visually-hidden">New Task</label>
+          <p id="todo-hint" class="visually-hidden">
+            Add a new task to your to-do list. Example: “Buy milk”
+          </p>
+          <p id="todo-error" class="visually-hidden">
+            Please enter a task before submitting.
+          </p>
           <input
+            type="text"
             id="todo__textInput"
             class="form__input"
-            type="text"
             placeholder="Add a task"
+            aria-describedby="todo-hint"
           />
-          <button
-            class="form__addBtn"
-            type="submit"
-            aria-label="Add to do list"
-          >
-            <i class="fa-solid fa-plus"></i>
+          <button type="submit" class="form__addBtn">
+            <span class="visually-hidden">Add task</span>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i>
           </button>
         </form>
-
-        <p id="form-message" class="form__message" aria-live="polite"></p>
-
+        <!-- live region -->
+        <p id="form-message" class="visually-hidden" role="status"></p>
+        <h2 class="visually-hidden" id="tasks-heading">Tasks</h2>
+        <!-- to-do list -->
         <ul class="main__lists">
           <li class="lists__item">
-            <label>
-              <input class="item__checkbox" type="checkbox" />
-              <span class="item__content">Build a space-themed app</span>
+            <!-- 1. checkbox + text -->
+            <input type="checkbox" id="task-1-check" class="item__checkbox" />
+            <label for="task-1-check">
+              <span id="task-1-text" class="item__content"
+                >Build a space-themed app</span
+              >
             </label>
             <button
+              type="button"
               class="item__deleteBtn"
-              aria-label="Delete to do list button"
+              aria-labelledby="task-1-del task-1-text"
             >
-              <i class="fa-regular fa-trash-can"></i>
+              <span id="task-1-del" class="visually-hidden">Delete</span>
+              <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
             </button>
           </li>
         </ul>
