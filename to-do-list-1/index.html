@@ -3,75 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do List</title>
-    <script src="/main.js" defer></script>
-    <link rel="stylesheet" href="/style.css" />
-    <!-- fontawesome -->
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Linking JS -->
+    <script src="./main.js"></script>
+    <!-- Linking fontawesom -->
     <script
       src="https://kit.fontawesome.com/a5f079a000.js"
       crossorigin="anonymous"
     ></script>
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <title>To do list</title>
   </head>
   <body>
     <section class="todo__container">
-      <!-- header -->
       <header class="todo__header">
-        <h1 class="header__title">Space To-Do</h1>
-        <button type="button" class="header__toggleBtn" aria-pressed="false">
-          <span class="visually-hidden">Toggle light/dark mode</span>
-          <!-- light mode -->
-          <i class="fa-solid fa-sun" aria-hidden="true"></i>
-          <!-- dark mode -->
-          <!-- <i class="fa-solid fa-moon" aria-hidden="true" hidden></i> -->
+        <h1 class="header__title">To do list</h1>
+        <button class="header__toggleBtn">
+          <i class="fa-solid fa-earth-asia"></i>
         </button>
       </header>
-      <!-- main -->
+
       <main class="todo__main">
-        <form action="#" id="main__form" class="glass-bg">
-          <label for="todo__textInput" class="visually-hidden">New Task</label>
-          <p id="todo-hint" class="visually-hidden">
-            Add a new task to your to-do list. Example: “Buy milk”
-          </p>
-          <p id="todo-error" class="visually-hidden">
-            Please enter a task before submitting.
-          </p>
-          <input
-            type="text"
-            id="todo__textInput"
-            class="form__input"
-            placeholder="Add a task"
-            aria-describedby="todo-hint"
-          />
-          <button type="submit" class="form__addBtn">
-            <span class="visually-hidden">Add task</span>
-            <i class="fa-solid fa-plus" aria-hidden="true"></i>
+        <form id="main__form" action="#">
+          <div class="form__inputField">
+            <label for="form__input">Add a task</label>
+            <input id="form__input" type="text" />
+          </div>
+
+          <button class="form__addBtn">
+            <i class="fa-solid fa-rocket"></i>
           </button>
         </form>
-        <!-- live region -->
-        <p id="form-message" class="visually-hidden" role="status"></p>
-        <h2 class="visually-hidden" id="tasks-heading">Tasks</h2>
-        <!-- to-do list -->
+
         <ul class="main__lists">
-          <li class="lists__item glass-bg">
-            <!-- 1. checkbox + text -->
-            <input type="checkbox" id="task-1-check" class="item__checkbox" />
-            <label for="task-1-check">
-              <span id="task-1-text" class="item__content">app</span>
-            </label>
-            <button
-              type="button"
-              class="item__deleteBtn"
-              aria-labelledby="task-1-del task-1-text"
-            >
-              <span id="task-1-del" class="visually-hidden">Delete</span>
-              <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+          <li class="lists__item">
+            <input class="item__checkbox" type="checkbox" />
+            <span class="item__content"> Hello </span>
+            <button class="item__deleteBtn">
+              <i class="fa-solid fa-meteor"></i>
             </button>
           </li>
         </ul>
