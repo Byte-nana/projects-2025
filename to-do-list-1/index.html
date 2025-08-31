@@ -6,7 +6,7 @@
     <!-- Linking CSS -->
     <link rel="stylesheet" href="./style.css" />
     <!-- Linking JS -->
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
     <!-- Linking fontawesom -->
     <script
       src="https://kit.fontawesome.com/a5f079a000.js"
@@ -18,24 +18,24 @@
     <section class="todo__container">
       <header class="todo__header">
         <h1 class="header__title">Space to-do</h1>
-        <button class="header__toggleBtn">
+        <button class="header__toggleBtn" type="button">
           <i class="fa-solid fa-earth-asia"></i>
         </button>
       </header>
 
       <main class="todo__main">
-        <form id="main__form" action="#">
+        <form action="#" id="main__form">
           <div class="form__inputField">
             <input id="form__input" type="text" />
             <label for="form__input">Add a task</label>
           </div>
-          <button class="form__addBtn">
+          <button class="form__addBtn" type="submit">
             <i class="fa-solid fa-rocket"></i>
           </button>
         </form>
 
         <ul class="main__lists">
-          <li class="lists__item">
+          <!-- <li class="lists__item">
             <input
               id="lists__checkbox"
               class="item__checkbox"
@@ -44,10 +44,10 @@
             <label for="lists__checkbox" class="item__tick"></label>
 
             <span class="item__content"> Hello </span>
-            <button class="item__deleteBtn">
+            <button class="item__deleteBtn" type="button">
               <i class="fa-solid fa-meteor"></i>
             </button>
-          </li>
+          </li> -->
         </ul>
       </main>
     </section>
