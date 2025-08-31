@@ -12,12 +12,12 @@
       src="https://kit.fontawesome.com/a5f079a000.js"
       crossorigin="anonymous"
     ></script>
-    <title>To do list</title>
+    <title>Space to-do</title>
   </head>
   <body>
     <section class="todo__container">
       <header class="todo__header">
-        <h1 class="header__title">To do list</h1>
+        <h1 class="header__title">Space to-do</h1>
         <button class="header__toggleBtn">
           <i class="fa-solid fa-earth-asia"></i>
         </button>
@@ -26,10 +26,9 @@
       <main class="todo__main">
         <form id="main__form" action="#">
           <div class="form__inputField">
-            <label for="form__input">Add a task</label>
             <input id="form__input" type="text" />
+            <label for="form__input">Add a task</label>
           </div>
-
           <button class="form__addBtn">
             <i class="fa-solid fa-rocket"></i>
           </button>
@@ -37,7 +36,13 @@
 
         <ul class="main__lists">
           <li class="lists__item">
-            <input class="item__checkbox" type="checkbox" />
+            <input
+              id="lists__checkbox"
+              class="item__checkbox"
+              type="checkbox"
+            />
+            <label for="lists__checkbox" class="item__tick"></label>
+
             <span class="item__content"> Hello </span>
             <button class="item__deleteBtn">
               <i class="fa-solid fa-meteor"></i>
