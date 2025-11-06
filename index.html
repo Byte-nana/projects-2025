@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <title></title>
+    <meta name="description" content="Description of website" />
+    <meta name="author" content="Byte-nana" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- OG -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a5f079a000.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Javascript -->
+    <script type="module" src="./src/main2.js" defer></script>
+  </head>
+  <body>
+    <section class="card">
+      <header class="card__header">
+        <h1 class="header__title">To-do list</h1>
+        <div class="header__wrapper">
+          <ul class="header__categories">
+            <li class="category">
+              <button class="category__button" data-category="all">All</button>
+            </li>
+            <li class="category">
+              <button class="category__button" data-category="active">
+                Active
+              </button>
+            </li>
+            <li class="category">
+              <button class="category__button" data-category="completed">
+                Completed
+              </button>
+            </li>
+          </ul>
+          <button class="header__button">
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
+      </header>
+      <main class="card__main">
+        <ul class="main__items"></ul>
+      </main>
+      <footer class="card__footer">
+        <form action="#" id="footer__form">
+          <input type="text" id="footer__input" />
+          <button type="submit" class="footer__button">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </form>
+      </footer>
+    </section>
+  </body>
+</html>
