@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light dark;
   --color-fresh-lime: #c6f68d;
   --color-leaf-green: #9ad57c;
   --color-soft-moss: #6fb36e;
@@ -28,9 +29,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-deep-forest);
+  background-color: light-dark(var(--color-deep-forest), black);
 }
-
+body.light {
+  color-scheme: light;
+}
+body.dark {
+  color-scheme: dark;
+}
 .card {
   width: 400px;
 }
@@ -47,6 +53,7 @@ body {
 }
 
 .header__title {
+  color: light-dark(black, white);
   font-size: 3rem;
 }
 
@@ -65,10 +72,11 @@ body {
   padding: 0.2rem 1rem;
   font-size: 1.2rem;
   border-bottom: 2px solid transparent;
+  color: light-dark(black, white);
   transition: all 300ms ease;
 }
 .category__button:hover {
-  color: white;
+  color: light-dark(white, black);
 }
 
 .category--selected {
@@ -84,6 +92,7 @@ body {
   transform: scale(1.2);
   color: var(--color-fresh-lime);
 }
+
 .card__main {
   height: 400px;
   padding: 1rem 2rem;
@@ -95,6 +104,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+  color: light-dark(black, black);
   font-size: 1.3rem;
 }
 
@@ -112,6 +122,7 @@ body {
 }
 
 .row__button {
+  color: light-dark(black, black);
   font-size: 1.2rem;
   transition: all 300ms ease;
 }
@@ -137,6 +148,7 @@ body {
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
+  background-color: light-dark(white, white);
   font-size: 1.2rem;
 }
 
@@ -147,7 +159,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 1rem auto 0;
-  border: 2px solid white;
+  border: 2px solid light-dark(black, white);
   border-radius: 50%;
   font-size: 3rem;
   transition: all 300ms ease;
